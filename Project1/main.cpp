@@ -28,7 +28,7 @@ int main() {
 	
 	std::cout << "Сумма всех чисел = " << sum << std::endl;
 	std::cout << "Сумма четных чисел = " << evensum << std::endl;
-	std::cout << < "Сумма всех нечетных чисел = " << oddsum << std::endl;
+	std::cout << "Сумма всех нечетных чисел = " << oddsum << std::endl;
 
 
 	return 0;
