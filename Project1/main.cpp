@@ -5,8 +5,8 @@ int main() {
 
 	float num;
 	float sum = 0;
-	int evensum;
-	float oddsum;
+	int evensum = 0;
+	float oddsum = 0;
 
 
 	std::cout << "В этой программе вы вводите числа и складываете их, пока не введете 0\n\n\n\n ";
