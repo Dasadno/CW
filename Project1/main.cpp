@@ -69,7 +69,10 @@ int main() {
 			{
 				i++;
 			}
-			
+			else
+			{
+				return 0;
+			}
 		}
 		else if (answer == "евро" || answer == "≈вро")
 		{
@@ -84,6 +87,10 @@ int main() {
 			else if (exitansw == 'n' || exitansw == 'N')
 			{
 				i++;
+			}
+			else
+			{
+				return 0;
 			}
 		}
 		else if (answer == "ёань" || answer == "юань")
@@ -100,6 +107,10 @@ int main() {
 			{
 				i++;
 			}
+			else
+			{
+				return 0;
+			}
 		}
 		else if (answer == "‘арит" || answer == "фарит")
 		{
@@ -114,6 +125,10 @@ int main() {
 			else if (exitansw == 'n' || exitansw == 'N')
 			{
 				i++;
+			}
+			else
+			{
+				return 0;
 			}
 		}
 		else if (answer == "…ена" || answer == "йена")
@@ -130,6 +145,14 @@ int main() {
 			{
 				i++;
 			}
+			else
+			{
+				return 0;
+			}
+		}
+		else
+		{
+			return 0;
 		}
 	}
 
