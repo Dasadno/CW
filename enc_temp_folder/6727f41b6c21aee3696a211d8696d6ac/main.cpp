@@ -16,7 +16,7 @@ int main() {
 		
 	} while (num != 0);
 	
-	std::cout << "Сумма всех чисел = " << sum;
+	std::cout << "Сумма всех чисел =" << sum;
 
 
 
