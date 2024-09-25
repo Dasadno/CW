@@ -1,8 +1,10 @@
 #include <iostream>
 #include <windows.h>
+#include <string.h>
 int main() {
-	setlocale(LC_ALL, "ru");
-
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	/*
 	int num;
 	int sum = 0;
 	int evensum = 0;
@@ -29,6 +31,107 @@ int main() {
 	std::cout << "Сумма всех чисел = " << sum << std::endl;
 	std::cout << "Сумма четных чисел = " << evensum << std::endl;
 	std::cout << "Сумма всех нечетных чисел = " << oddsum << std::endl;
+
+	*/
+
+
+	int rub = 1;
+	int rub_num;
+	std::string answer;
+	float dollar = 92.37;
+	float euro = 103.26;
+	float uan = 13.14;
+	float farit = 37;
+	float en = 0.64;
+	char exitansw;
+
+	
+
+	for (int i = 0; i < 1;)
+	{
+		std::cout << "Введите кол-во рублей: ";
+		std::cin >> rub_num;
+		std::cout << "На выбор 5 валют: Доллар, Евро, Юань, Фарит, Йена \n";
+		std::cout << "Введите валюту для покупки: ";
+		std::cin >> answer;
+
+		if (answer == "доллар" || answer == "Доллар")
+		{
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / dollar) * (5 / 100.0) << " Долларов\n";
+			std::cout << "5 Процентов комиссии взымает банк.\n\n";
+			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
+			std::cin >> exitansw;
+			if (exitansw == 'y' || exitansw == 'Y')
+			{
+				continue;
+			}
+			else if (exitansw == 'n' || exitansw == 'N')
+			{
+				i++;
+			}
+			
+		}
+		else if (answer == "евро" || answer == "Евро")
+		{
+			std::cout << "На " << rub_num << " Рулей вы купили " << (rub_num / euro) * (5 / 100.0) << " Евро";
+			std::cout << "5 Процентов комиссии взымает банк. \n\n";
+			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
+			std::cin >> exitansw;
+			if (exitansw == 'y' || exitansw == 'Y')
+			{
+				continue;
+			}
+			else if (exitansw == 'n' || exitansw == 'N')
+			{
+				i++;
+			}
+		}
+		else if (answer == "Юань" || answer == "юань")
+		{
+			std::cout << "На " << rub_num << " Рулей вы купили " << (rub_num / uan) * (5 / 100.0) << " Юаней";
+			std::cout << "5 Процентов комиссии взымает банк. \n\n";
+			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
+			std::cin >> exitansw;
+			if (exitansw == 'y' || exitansw == 'Y')
+			{
+				continue;
+			}
+			else if (exitansw == 'n' || exitansw == 'N')
+			{
+				i++;
+			}
+		}
+		else if (answer == "Фарит" || answer == "фарит")
+		{
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / farit) * (5 / 100.0) << " Фаритов";
+			std::cout << "5 Процентов комиссии взымает банк. \n\n";
+			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
+			std::cin >> exitansw;
+			if (exitansw == 'y' || exitansw == 'Y')
+			{
+				continue;
+			}
+			else if (exitansw == 'n' || exitansw == 'N')
+			{
+				i++;
+			}
+		}
+		else if (answer == "Йена" || answer == "йена")
+		{
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / en) * (5 / 100.0) << " Йен";
+			std::cout << "5 Процентов комиссии взымает банк. \n\n";
+			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
+			std::cin >> exitansw;
+			if (exitansw == 'y' || exitansw == 'Y')
+			{
+				continue;
+			}
+			else if (exitansw == 'n' || exitansw == 'N')
+			{
+				i++;
+			}
+		}
+	}
 
 
 	return 0;
