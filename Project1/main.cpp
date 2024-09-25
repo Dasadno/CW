@@ -38,11 +38,11 @@ int main() {
 	int rub = 1;
 	int rub_num;
 	std::string answer;
-	float dollar = 92.37;
-	float euro = 103.26;
-	float uan = 13.14;
-	float farit = 37;
-	float en = 0.64;
+	double dollar = 92.37;
+	double euro = 103.26;
+	double uan = 13.14;
+	double farit = 37;
+	double en = 0.64;
 	char exitansw;
 
 	
