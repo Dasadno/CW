@@ -57,7 +57,7 @@ int main() {
 
 		if (answer == "доллар" || answer == "Доллар")
 		{
-			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / dollar) * (5 / 100.0) << " Долларов\n";
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / dollar) - ((rub_num / dollar) / 100 * 5) << " Долларов\n";
 			std::cout << "5 Процентов комиссии взымает банк.\n\n";
 			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
 			std::cin >> exitansw;
@@ -76,7 +76,7 @@ int main() {
 		}
 		else if (answer == "евро" || answer == "Евро")
 		{
-			std::cout << "На " << rub_num << " Рулей вы купили " << (rub_num / euro) * (5 / 100.0) << " Евро";
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / euro) - ((rub_num / euro) / 100 * 5)  << " Евро\n";
 			std::cout << "5 Процентов комиссии взымает банк. \n\n";
 			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
 			std::cin >> exitansw;
@@ -95,7 +95,7 @@ int main() {
 		}
 		else if (answer == "Юань" || answer == "юань")
 		{
-			std::cout << "На " << rub_num << " Рулей вы купили " << (rub_num / uan) * (5 / 100.0) << " Юаней";
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / uan) - ((rub_num / uan) / 100 * 5) << " Юаней \n";
 			std::cout << "5 Процентов комиссии взымает банк. \n\n";
 			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
 			std::cin >> exitansw;
@@ -114,7 +114,7 @@ int main() {
 		}
 		else if (answer == "Фарит" || answer == "фарит")
 		{
-			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / farit) * (5 / 100.0) << " Фаритов";
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / farit) - ((rub_num / farit) / 100 * 5) << " Фаритов\n";
 			std::cout << "5 Процентов комиссии взымает банк. \n\n";
 			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
 			std::cin >> exitansw;
@@ -133,7 +133,7 @@ int main() {
 		}
 		else if (answer == "Йена" || answer == "йена")
 		{
-			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / en) * (5 / 100.0) << " Йен";
+			std::cout << "На " << rub_num << " Рублей вы купили " << (rub_num / en) - ((rub_num / en) / 100 * 5) << " Йен";
 			std::cout << "5 Процентов комиссии взымает банк. \n\n";
 			std::cout << "Если хотите купить еще валюты введите y, в ином случае введите n: ";
 			std::cin >> exitansw;
