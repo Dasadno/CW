@@ -1,21 +1,21 @@
 #include <iostream>
-#include <Windows.h>
+#include <windows.h>
 int main() {
 	setlocale(LC_ALL, "ru");
 
-	float num;
-	float sum = 0;
+	int num;
+	int sum = 0;
 	int evensum = 0;
-	float oddsum = 0;
+	int oddsum = 0;
 
 
-	std::cout << "В этой программе вы вводите числа и складываете их, пока не введете 0\n\n\n\n ";
+	std::cout << "В этой программе вы вводите числа и складываете их, пока не введете 0\n\n ";
 	do
 	{
 		std::cout << "Введите число: ";
 		std::cin >> num;
 		sum += num;
-		if (num / 2 == 0)
+		if (num % 2 == 0)
 		{
 			evensum += num;
 		}
