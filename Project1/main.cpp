@@ -10,7 +10,7 @@ int main() {
 
 
 	std::cout << "В этой программе вы вводите числа и складываете их, пока не введете 0\n\n ";
-	do
+	while (num != 0)
 	{
 		std::cout << "Введите число: ";
 		std::cin >> num;
@@ -24,7 +24,7 @@ int main() {
 			oddsum += num;
 		}
 		
-	} while (num != 0);
+	}
 	
 	std::cout << "Сумма всех чисел = " << sum << std::endl;
 	std::cout << "Сумма четных чисел = " << evensum << std::endl;
