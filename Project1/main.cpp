@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <Windows.h>
 int main() {
 	setlocale(LC_ALL, "ru");
 
@@ -15,7 +15,7 @@ int main() {
 		std::cout << "¬ведите число: ";
 		std::cin >> num;
 		sum += num;
-		if (num / 2)
+		if (num / 2 == 0)
 		{
 			evensum += num;
 		}
