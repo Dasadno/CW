@@ -3,14 +3,14 @@
 #include <string.h>
 using namespace std;
 
-bool registration(string login, string password)
+bool logining(string login, string password, string login_pass, string password_pass)
 {
 	if (end(login) - begin(login) > 15 || end(password) - begin(password) > 15)
 	{
-		
+		cout << "Ћогин и пароль не могут превышать 15 символов.";
 		return false;
 	}
-	else
+	else if (login == login_pass && password == password_pass)
 	{
 		return true;
 	}
@@ -22,24 +22,24 @@ int main(){
 	SetConsoleOutputCP(1251);
 
 
-	string login;
-	string password;
+	string login = "arbyz";
+	string password = "olegovich";
+	string login_pass;
+	string password_pass;
 
 	cout << "¬ведите логин: ";
-	cin >> login;
+	cin >> login_pass;
 	cout << "¬ведите пароль: ";
-	cin >> password;
+	cin >> password_pass;
 
-	bool reg = registration(login, password);
+	bool reg = logining(login, password, login_pass, password_pass);
 	if (reg == true)
 	{
-		cout << "–егистраци€ прошла успешно \n";
-		cout << "¬аш логин: " << login << "\n";
-		cout << "¬аш пароль:  " << password << "\n";
+		cout << "¬ход прошел успешно \n";
 	}
 	else
 	{
-		cout << "Ћогин не может привышать длинну в 15 символов.";
+		cout << "ѕароль или логин введены неправильно.";
 	}
 
 
