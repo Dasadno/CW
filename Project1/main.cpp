@@ -7,7 +7,7 @@ bool logining(string login, string password, string login_pass, string password_
 {
 	if (end(login) - begin(login) > 15 || end(password) - begin(password) > 15)
 	{
-		cout << "Логин и пароль не могут превышать 15 символов.";
+		cout << "Логин и пароль не могут превышать лимит в 15 символов. ";
 		return false;
 	}
 	else if (login == login_pass && password == password_pass)
