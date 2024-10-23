@@ -1,6 +1,6 @@
 #include <iostream>
 #include <windows.h>
-#include <string.h>
+#include <string>
 using namespace std;
 
 bool logining(string login, string password, string login_pass, string password_pass)
@@ -28,9 +28,9 @@ int main(){
 	string password_pass;
 
 	cout << "¬ведите логин: ";
-	cin >> login_pass;
+	getline(cin, login_pass, '\n');
 	cout << "¬ведите пароль: ";
-	cin >> password_pass;
+	getline(cin, password_pass, '\n');
 
 	bool reg = logining(login, password, login_pass, password_pass);
 	if (reg == true)
