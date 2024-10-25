@@ -20,5 +20,12 @@ int main()
 
 	setlocale(LC_ALL, "1251");
 	 
+	int size;
+	std::cin >> size;
+	int* num1 = new int[size];
 
+
+	delete[] num1;
+
+	return 0;
 }
