@@ -11,6 +11,15 @@ void Arbyz(int arr[], int size, int* arr1[])
 	}
 }
 
+template <typename at>
+void my_swap(at &examp1, at &examp2)
+{
+	at num1 = examp1;
+	at num2 = examp2;
+	examp1 = num2;
+	examp2 = num1;
+}
+
 
 
 int main()
@@ -23,6 +32,13 @@ int main()
 	int size;
 	std::cin >> size;
 	int* num1 = new int[size];
+
+	int a = 5;
+	int b = 7;
+	my_swap(a, b);
+
+
+	std::cout << a << " " << b;
 
 
 	delete[] num1;
