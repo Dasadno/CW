@@ -19,6 +19,6 @@ int main()
 	SetConsoleOutputCP(1251);
 
 	setlocale(LC_ALL, "1251");
-
+	 
 
 }
