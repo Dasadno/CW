@@ -1,3 +1,4 @@
+#include <vector>
 #include <iostream>
 #include <Windows.h>
 using namespace std;
@@ -9,6 +10,22 @@ int main()
 	setlocale(LC_ALL, "1251");
 
 	srand(time(NULL));
+
+	std::vector<int> int_vec;
+	for (int i = 0; i < 10; i++)
+	{
+		int_vec.push_back(rand() % 10 + 1);
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << int_vec[i] << ", ";
+	}
+
+
+
+	Sleep(10000);
+	system("cls");
+
 	int size1 = 5;
 	
 	int*** arr = new int** [size1];
