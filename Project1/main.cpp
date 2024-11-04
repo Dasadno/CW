@@ -11,23 +11,39 @@ int main()
 	srand(time(NULL));
 	int size1 = 5;
 	
-	int* arr = new int[size1];
-	for (int i = 0; i < size1; i++)
-	{
-		arr[i] = rand() % 10 + 1;
-	}
-	int size2 = size1 + 1;
-	int* arr1 = new int[size2];
+	int*** arr = new int** [size1];
 		for (int i = 0; i < size1; i++)
 		{
-			arr1[i] = arr[i];
+			arr[i] = new int* [size1];
+			
+			for (int y = 0; y < size1; y++) {
+				arr[i][y] = new int[size1];
+			}
 		}
-		arr1[size2 - 1] = 777;
-		delete[]arr;
-	for (int i = 0; i < size2; i++)
-	{
-		cout << arr1[i] << "\n";
-	}
-	delete[]arr1;
+		for (int i = 0; i < size1; i++)
+		{
+			for (int z = 0; z < size1; z++)
+			{
+				for (int x = 0; x < size1; x++)
+				{
+					arr[i][z][x] = rand() % 10 + 1;
+				}
+			}
+		}
+
+		for (int i = 0; i < size1; i++)
+		{
+			for (int z = 0; z < size1; z++)
+			{
+				for (int x = 0; x < size1; x++)
+				{
+					cout << arr[i][z][x] << ", ";
+				}
+			}
+		}
+
+		
+
+		delete[] arr;
 	return 0;
 }
