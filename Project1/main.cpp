@@ -1,66 +1,59 @@
-#include <vector>
-#include <iostream>
 #include <Windows.h>
-using namespace std;
+#include <iostream>
+#include <string>
+
+struct Student
+{
+	std::string name;
+	std::string surname;
+	std::string patronymic;
+	std::string FCs;
+
+	unsigned int groupNumber;
+
+	std::string department;
+
+	short int* evaluations[4]{};
+
+	bool excluded = false;
+
+	void SetFCs()
+	{
+		std::cout << "¬ведите им€ студента: ";
+		std::getline(std::cin, name, '\n');
+		std::cout << "¬ведите фамилию студента: ";
+		std::getline(std::cin, surname, '\n');
+		std::cout << "¬ведите отчество студента: ";
+		std::getline(std::cin, patronymic, '\n');
+		UpdateFCs();
+	}
+	std::string GetFCs()
+	{
+		return FCs;
+	}
+	void UpdateFCs()
+	{
+		FCs = surname + " " + name + " " + patronymic;
+	}
+};
+
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	setlocale(LC_ALL, "1251");
-
-	srand(time(NULL));
-
-	std::vector<int> int_vec;
-	for (int i = 0; i < 10; i++)
+	const int size = 3;
+	Student rpo23_2[size];
+	for (int i = 0; i < size; i++)
 	{
-		int_vec.push_back(rand() % 10 + 1);
-	}
-	for (int i = 0; i < 10; i++)
-	{
-		std::cout << int_vec[i] << ", ";
+		rpo23_2[i].SetFCs();
 	}
 
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << "\n" << rpo23_2[i].GetFCs();
+	}
+	std::cout << "\n";
 
-
-	Sleep(10000);
-	system("cls");
-
-	int size1 = 5;
-	
-	int*** arr = new int** [size1];
-		for (int i = 0; i < size1; i++)
-		{
-			arr[i] = new int* [size1];
-			
-			for (int y = 0; y < size1; y++) {
-				arr[i][y] = new int[size1];
-			}
-		}
-		for (int i = 0; i < size1; i++)
-		{
-			for (int z = 0; z < size1; z++)
-			{
-				for (int x = 0; x < size1; x++)
-				{
-					arr[i][z][x] = rand() % 10 + 1;
-				}
-			}
-		}
-
-		for (int i = 0; i < size1; i++)
-		{
-			for (int z = 0; z < size1; z++)
-			{
-				for (int x = 0; x < size1; x++)
-				{
-					cout << arr[i][z][x] << ", ";
-				}
-			}
-		}
-
-		
-
-		delete[] arr;
 	return 0;
 }
