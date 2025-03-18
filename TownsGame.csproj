@@ -47,7 +47,7 @@
     <Compile Include="src\DataCollector.cs" />
     <Compile Include="src\Game.cs" />
     <Compile Include="src\Player.cs" />
-    <Compile Include="src\source.cs" />
+    <Compile Include="src\Scraper.cs" />
     <Compile Include="src\Town.cs" />
   </ItemGroup>
   <ItemGroup>
