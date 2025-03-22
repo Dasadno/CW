@@ -10,6 +10,7 @@ namespace CountryGame
     {
         static public void Main(string[] args)
         {
+
             DataCollector collector = new DataCollector();
             List<string> list = new List<string>();
             list = collector.GetCountryList();
@@ -17,7 +18,7 @@ namespace CountryGame
             {
                 Console.WriteLine(item);
             }
-            
+            DataCollector collector2 = new DataCollector();
         }
     }
 }

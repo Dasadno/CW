@@ -16,7 +16,7 @@ namespace CountryGame
 
         public DataCollector() 
         {
-            SaveTowns();
+            SaveCountries();
         }
 
         public static DataCollector getInstance()
@@ -28,14 +28,14 @@ namespace CountryGame
 
         public List<string> GetCountryList()
         {
-            string path = "C:\\Users\\1\\source\\repos\\CountryGame\\CountryGame\\res\\content.txt";
+            string path = "C:\\Users\\1\\source\\repos\\CountryGame\\CountryGame\\res\\content.txt"; // Relative path will be better
             var list = File.ReadAllLines(path).ToList();
 
             return list;
         } 
-        private void SaveTowns()
+        private void SaveCountries()
         {
-            string path = "C:\\Users\\1\\source\\repos\\CountryGame\\CountryGame\\res\\content.txt";
+            string path = "C:\\Users\\1\\source\\repos\\CountryGame\\CountryGame\\res\\content.txt"; // Relative path will be better
             FileInfo fileInf = new FileInfo(path);
            
 
@@ -45,13 +45,13 @@ namespace CountryGame
            
             }
             TextWriter tw = new StreamWriter(path);
-            foreach (string s in CountryTitleList())
+            foreach (string s in CountriesTitleList())
             {
                 tw.WriteLine(s);
             }
             tw.Close();
         }
-        private static List<string> CountryTitleList()
+        private static List<string> CountriesTitleList()
         {
             List<string> CultureList = new List<string>();
 
@@ -67,6 +67,7 @@ namespace CountryGame
             }
             return CultureList;
         }
+
     }
 }
 
