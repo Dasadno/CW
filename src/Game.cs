@@ -10,7 +10,7 @@ namespace CountryGame
     {
         int _moveOrder;
          
-        List<Town> _townList;
+        List<Country> _townList;
 
         Player _winner = null;       
 

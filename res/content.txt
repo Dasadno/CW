@@ -1,0 +1,247 @@
+Djibouti
+Eritrea
+Ethiopia
+Namibia
+South Africa
+Cameroon
+Ghana
+World
+United Arab Emirates
+Bahrain
+Algeria
+Egypt
+Israel
+Iraq
+Jordan
+Comoros
+Kuwait
+Lebanon
+Libya
+Morocco
+Mauritania
+Oman
+Palestinian Authority
+Qatar
+Saudi Arabia
+Sudan
+Somalia
+South Sudan
+Syria
+Chad
+Tunisia
+Yemen
+Chile
+India
+Tanzania
+Spain
+Azerbaijan
+Russia
+Belarus
+Zambia
+Bulgaria
+Mali
+Bangladesh
+China
+France
+Bosnia & Herzegovina
+Andorra
+Italy
+Philippines
+Uganda
+United States
+Iran
+Czechia
+United Kingdom
+Denmark
+Greenland
+Kenya
+Austria
+Belgium
+Switzerland
+Germany
+Liechtenstein
+Luxembourg
+Niger
+Maldives
+Senegal
+Bhutan
+Togo
+Cyprus
+Greece
+Europe
+Antigua & Barbuda
+Anguilla
+American Samoa
+Australia
+Barbados
+Burundi
+Bermuda
+Bahamas
+Botswana
+Belize
+Canada
+Cocos (Keeling) Islands
+Cook Islands
+Christmas Island
+Dominica
+Finland
+Fiji
+Falkland Islands
+Micronesia
+Grenada
+Guernsey
+Gibraltar
+Gambia
+Guam
+Guyana
+Hong Kong SAR
+Ireland
+Isle of Man
+British Indian Ocean Territory
+Jersey
+Jamaica
+Kiribati
+St. Kitts & Nevis
+Cayman Islands
+St. Lucia
+Liberia
+Lesotho
+Madagascar
+Marshall Islands
+Macao SAR
+Northern Mariana Islands
+Montserrat
+Malta
+Mauritius
+Malawi
+Malaysia
+Norfolk Island
+Nigeria
+Netherlands
+Nauru
+Niue
+New Zealand
+Papua New Guinea
+Pakistan
+Pitcairn Islands
+Puerto Rico
+Palau
+Rwanda
+Solomon Islands
+Seychelles
+Sweden
+Singapore
+St Helena, Ascension, Tristan da Cunha
+Slovenia
+Sierra Leone
+Sint Maarten
+Eswatini
+Turks & Caicos Islands
+Tokelau
+Tonga
+Trinidad & Tobago
+Tuvalu
+U.S. Outlying Islands
+St. Vincent & Grenadines
+British Virgin Islands
+U.S. Virgin Islands
+Vanuatu
+Samoa
+Zimbabwe
+Latin America
+Argentina
+Bolivia
+Brazil
+Colombia
+Costa Rica
+Cuba
+Dominican Republic
+Ecuador
+Equatorial Guinea
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Peru
+Paraguay
+El Salvador
+Uruguay
+Venezuela
+Estonia
+Afghanistan
+Burkina Faso
+Guinea
+Guinea-Bissau
+Faroe Islands
+Benin
+St. Barthélemy
+Congo (DRC)
+Central African Republic
+Congo
+Côte d’Ivoire
+Gabon
+French Guiana
+Guadeloupe
+Haiti
+Monaco
+St. Martin
+Martinique
+New Caledonia
+French Polynesia
+St. Pierre & Miquelon
+Réunion
+Wallis & Futuna
+Mayotte
+Croatia
+Hungary
+Armenia
+Indonesia
+Iceland
+San Marino
+Vatican City
+Japan
+Georgia
+Cabo Verde
+Kazakhstan
+Cambodia
+North Korea
+Korea
+Kyrgyzstan
+Angola
+Laos
+Lithuania
+Latvia
+Mozambique
+North Macedonia
+Mongolia
+Brunei
+Myanmar
+Norway
+Svalbard & Jan Mayen
+Nepal
+Aruba
+Bonaire, Sint Eustatius and Saba
+Curaçao
+Suriname
+Poland
+Portugal
+São Tomé & Príncipe
+Timor-Leste
+Moldova
+Romania
+Ukraine
+Sri Lanka
+Slovakia
+Albania
+Kosovo
+Montenegro
+Serbia
+Åland Islands
+Tajikistan
+Thailand
+Turkmenistan
+Turkey
+Uzbekistan
+Vietnam
+Taiwan

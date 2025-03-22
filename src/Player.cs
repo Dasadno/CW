@@ -12,10 +12,9 @@ namespace CountryGame
         public int RightAnswerCouner { get { return _rightAnswerCounter; } set { _rightAnswerCounter = value; } }
         public int MoveOrder { get { return _moveOrder; } set { _moveOrder = value; } }
 
-        public Player() { }
-
+      
       
         
-        }
+        
     }
 }
