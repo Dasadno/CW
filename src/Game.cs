@@ -36,16 +36,22 @@ namespace CountryGame
 
         private void PlayersSheet()
         {
+            Console.Clear();
             foreach (Player player in PlayersList)
             {
                 Console.WriteLine($"Player moves {player.MoveOrder} in the game,\n" +
                     $"Name: {player.Name},\n" +
-                    $"Right Answers: {player.RightAnswerCouner},\n" +
-                    $"");
+                    $"Right answers: {player.RightAnswerCouner},\n" +
+                    $"Last answer: {player.Answer}\n\n");
+               
             }
+            Console.WriteLine("Press any button to play");
+            Console.ReadKey();
+            GameSheet();
+
         }
 
-        
+
 
         private void Start()
         {
@@ -54,7 +60,7 @@ namespace CountryGame
                 int amounthOfPlayers = Convert.ToInt32(Console.Read());
             
             
-            for (int i = 1; i < amounthOfPlayers; i++)
+            for (int i = 1; i <= amounthOfPlayers; i++)
             {
                 Console.Clear();
                 Console.WriteLine($"Enter name of the player {i}");
@@ -65,6 +71,7 @@ namespace CountryGame
 
         private void GameSheet()
         {
+            CheckLive();
             Console.Clear();
             Console.WriteLine
                 ($"Current word: {LastWord}\n" +
@@ -73,25 +80,57 @@ namespace CountryGame
                 $"Player move: {PlayersList[_moveOrder].Name}\n\n\n" +
                 $"1. All players sheet\n\n" +
                 $"Enter: ");
-           
-                string Read = Convert.ToString(Console.Read());
-            if (Read == "1")
+
+            PlayersList[_moveOrder].Answer = Convert.ToString(Console.Read());
+            string answer = PlayersList[_moveOrder].Answer;
+
+
+            if (PlayersList[_moveOrder].Answer == "1")
             {
                 PlayersSheet();
             }
-            else
+            else if (!IsAnswerRight(PlayersList[_moveOrder].Answer))
             {
-                Console.WriteLine("\nWrong Input");
-                Thread.Sleep(2000);
+                PlayersList[_moveOrder].Lives--;
+                Console.WriteLine("\nNice try!");
+                Thread.Sleep(3000);
                 Console.Clear();
                 GameSheet();
             }
-                
-           
-           
-            
-           
-               
+            else if (IsAnswerRight(PlayersList[_moveOrder].Answer))
+            {
+                Console.WriteLine("It's right!");
+                Thread.Sleep(3000);
+                Console.Clear();
+                if (_moveOrder == PlayersList.Count)
+                {
+                    _moveOrder = 1;
+                }
+                _moveOrder++;
+            }
+
+
         }
+        private bool IsAnswerRight(string answer)
+        {
+            foreach (Country country in CountryList)
+            {
+                if (country.Name == answer)
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+        private void CheckLive()
+        {
+            if (PlayersList[_moveOrder].Lives <= 0)
+            {
+                PlayersList[_moveOrder].Lives = 2;
+                _moveOrder++;
+            }
+        }
+            
     }
 }
