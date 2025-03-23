@@ -20,6 +20,7 @@ namespace CountryGame
 
         private List<Country> _CountryList = new List<Country>(247);
 
+        public Game() { }
         public string LastWord { get; private set; }
         public char CurrentLetter { get; private set; }
         public List<Country> CountryList { get; }
