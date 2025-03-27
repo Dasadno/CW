@@ -12,13 +12,10 @@ namespace CountryGame
         {
 
             DataCollector collector = new DataCollector();
+            Game game = new Game();
             List<string> list = new List<string>();
             list = collector.GetCountryList();
-            foreach (string item in list)
-            {
-                Console.WriteLine(item);
-            }
-            DataCollector collector2 = new DataCollector();
+
         }
     }
 }

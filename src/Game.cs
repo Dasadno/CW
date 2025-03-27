@@ -20,7 +20,10 @@ namespace CountryGame
 
         private List<Country> _CountryList = new List<Country>(247);
 
-        public Game() { }
+        public Game() 
+        {
+            Start();
+        }
         public string LastWord { get; private set; }
         public char CurrentLetter { get; private set; }
         public List<Country> CountryList { get; }
@@ -38,7 +41,7 @@ namespace CountryGame
         private void PlayersSheet()
         {
             Console.Clear();
-            foreach (Player player in PlayersList)
+            foreach (Player player in _players)
             {
                 Console.WriteLine($"Player moves {player.MoveOrder} in the game,\n" +
                     $"Name: {player.Name},\n" +
@@ -56,17 +59,17 @@ namespace CountryGame
 
         private void Start()
         {
+                Console.Write("Enter amount of players ");
+                int amounthOfPlayers = Convert.ToInt32(Console.ReadLine());
             
-                Console.WriteLine("Enter amount of players: ");
-                int amounthOfPlayers = Convert.ToInt32(Console.Read());
             
-            
-            for (int i = 1; i <= amounthOfPlayers; i++)
+            for (int i = 1; i < amounthOfPlayers+1; i++)
             {
-                Console.Clear();
-                Console.WriteLine($"Enter name of the player {i}");
-                PlayersList.Add(new Player() { Name = Convert.ToString(Console.Read()), MoveOrder = i });
+                Console.WriteLine($"Enter name of the player {i} : ");
+                string name = Console.ReadLine();
+                _players.Add(new Player { MoveOrder = i, Name = name });
             }
+            
             PlayersSheet();
         }
 
@@ -126,7 +129,8 @@ namespace CountryGame
         }
         private void CheckLive()
         {
-            if (PlayersList[_moveOrder].Lives <= 0)
+            
+            if (_players[_moveOrder].Lives <= 0)
             {
                 PlayersList[_moveOrder].Lives = 2;
                 _moveOrder++;
