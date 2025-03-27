@@ -26,8 +26,8 @@ namespace CountryGame
         }
         public string LastWord { get; private set; }
         public char CurrentLetter { get; private set; }
-        public List<Country> CountryList { get; }
-        public List<Player> PlayersList { get; }
+        public List<Country> CountryList { get { return _CountryList; } }
+        public List<Player> PlayersList { get { return _players; } }
 
         private void SetCollectorTitlesAsCountry()
         {
@@ -49,10 +49,11 @@ namespace CountryGame
                     $"Last answer: {player.Answer}\n\n");
                
             }
-            Console.WriteLine("Press any button to play");
-            Console.ReadKey();
-            GameSheet();
-
+            Console.WriteLine("Enter something to play");
+            if(Console.ReadKey() != null)
+            {
+               // GameSheet();
+            }
         }
 
 
@@ -73,48 +74,6 @@ namespace CountryGame
             PlayersSheet();
         }
 
-        private void GameSheet()
-        {
-            CheckLive();
-            Console.Clear();
-            Console.WriteLine
-                ($"Current word: {LastWord}\n" +
-                $"Current letter: {CurrentLetter}\n" +
-                $"Move of the game: {_moveOrder}\n" +
-                $"Player move: {PlayersList[_moveOrder].Name}\n\n\n" +
-                $"1. All players sheet\n\n" +
-                $"Enter: ");
-
-            PlayersList[_moveOrder].Answer = Convert.ToString(Console.Read());
-            string answer = PlayersList[_moveOrder].Answer;
-
-
-            if (PlayersList[_moveOrder].Answer == "1")
-            {
-                PlayersSheet();
-            }
-            else if (!IsAnswerRight(PlayersList[_moveOrder].Answer))
-            {
-                PlayersList[_moveOrder].Lives--;
-                Console.WriteLine("\nNice try!");
-                Thread.Sleep(3000);
-                Console.Clear();
-                GameSheet();
-            }
-            else if (IsAnswerRight(PlayersList[_moveOrder].Answer))
-            {
-                Console.WriteLine("It's right!");
-                Thread.Sleep(3000);
-                Console.Clear();
-                if (_moveOrder == PlayersList.Count)
-                {
-                    _moveOrder = 1;
-                }
-                _moveOrder++;
-            }
-
-
-        }
         private bool IsAnswerRight(string answer)
         {
             foreach (Country country in CountryList)
